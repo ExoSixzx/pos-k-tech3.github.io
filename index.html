@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Café POS – Material Modern</title>
+<title>Café K-TECH</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL@0..1" rel="stylesheet">
@@ -21,16 +21,16 @@
     --card:#FFFFFF;     /* surface card */
   }
   .dark{
-    --brand-1:#D6BBA6;
-    --brand-2:#2B2A2F;
-    --brand-3:#F9FAFB;
-    --mint:#7AD8C3;
-    --peach:#9C6F5C;
-    --accent:#A78BFA;
-    --success:#34D399;
-    --danger:#F87171;
-    --surface:#111318;
-    --card:#1B1F24;
+    --brand-1:#E5D4C1;
+    --brand-2:#374151;
+    --brand-3:#F3F4F6;
+    --mint:#6EE7B7;
+    --peach:#FBBF24;
+    --accent:#8B5CF6;
+    --success:#10B981;
+    --danger:#EF4444;
+    --surface:#1F2937;
+    --card:#374151;
   }
   body{ font-family: "Roboto","Lato",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background: var(--surface); color: var(--brand-3); }
   .elev-1{ box-shadow: 0 1px 2px rgb(0 0 0 / 6%), 0 1px 1px rgb(0 0 0 / 4%); }
@@ -42,8 +42,8 @@
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
 }
-.dark .card{ background: radial-gradient(120% 120% at 0% 0%, rgba(255,255,255,.06), rgba(255,255,255,.05) 40%, rgba(255,255,255,.04) 70%) , var(--card);
-  border: 1px solid rgba(255,255,255,.08);
+.dark .card{ background: radial-gradient(120% 120% at 0% 0%, rgba(255,255,255,.12), rgba(255,255,255,.08) 40%, rgba(255,255,255,.06) 70%) , var(--card);
+  border: 1px solid rgba(255,255,255,.2);
 }
 /* Liquid shine inside cards */
 .card:before{
@@ -66,8 +66,8 @@
   }
   .dark .appbar{
     background:
-      radial-gradient(1000px 500px at 90% 0%, rgba(255,255,255,0.06), transparent 60%),
-      linear-gradient(135deg, #1E1E22, #21242A 50%, #262B33);
+      radial-gradient(1000px 500px at 90% 0%, rgba(255,255,255,0.1), transparent 60%),
+      linear-gradient(135deg, #374151, #4B5563 50%, #6B7280);
   }
   /* Glass on scroll */
   .appbar.glass-on {
@@ -77,10 +77,10 @@
     box-shadow: 0 10px 24px -16px rgba(0,0,0,.25);
   }
   .dark .appbar.glass-on{
-    background: rgba(24,24,27,0.6);
+    background: rgba(55,65,81,0.8);
     backdrop-filter: blur(16px) saturate(160%);
     -webkit-backdrop-filter: blur(16px) saturate(160%);
-    box-shadow: 0 18px 40px -20px rgba(0,0,0,.6);
+    box-shadow: 0 18px 40px -20px rgba(0,0,0,.4);
   }
   /* Material ripple */
   .md-btn{ position: relative; overflow: hidden; }
@@ -109,14 +109,26 @@
   .dark .qr-cell{ background:#000; }
   .material-symbols-rounded{ font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24; }
   /* Dark mode readability tweaks */
-  .dark, .dark body{ color:#E5E7EB; }
-  .dark .appbar{ color:#E5E7EB; }
-  .dark .card{ color:#E5E7EB; border:1px solid rgba(255,255,255,.14); }
-  .dark .card .opacity-60{ opacity:.88; }
-  .dark .card .opacity-70{ opacity:.92; }
-  .dark input, .dark select, .dark textarea{ color:#F3F4F6; border-color:rgba(255,255,255,.18); }
-  .dark ::placeholder{ color:rgba(229,231,235,.7); }
-  .dark .tab-btn{ color:#E5E7EB; }
+  .dark, .dark body{ color:#F9FAFB; }
+  .dark .appbar{ color:#F9FAFB; }
+  .dark .card{ color:#F9FAFB; border:1px solid rgba(255,255,255,.25); }
+  .dark .card .opacity-60{ opacity:.9; }
+  .dark .card .opacity-70{ opacity:.95; }
+  .dark input, .dark select, .dark textarea{
+    color:#F9FAFB;
+    background-color: rgba(255,255,255,.08);
+    border-color:rgba(255,255,255,.3);
+  }
+  .dark input:focus, .dark select:focus, .dark textarea:focus{
+    background-color: rgba(255,255,255,.12);
+    border-color:rgba(255,255,255,.4);
+  }
+  .dark ::placeholder{ color:rgba(249,250,251,.8); }
+  .dark .tab-btn{ color:#F9FAFB; }
+  .dark .bg-white{ background-color: rgba(255,255,255,.1) !important; }
+  .dark .bg-black\/5{ background-color: rgba(255,255,255,.15) !important; }
+  .dark .bg-black\/10{ background-color: rgba(255,255,255,.2) !important; }
+  .dark .border-black\/10{ border-color: rgba(255,255,255,.25) !important; }
 </style>
 </head>
 <body class="min-h-screen">
@@ -129,7 +141,7 @@
             <span class="material-symbols-rounded">coffee_maker</span>
           </div>
           <div>
-            <h1 class="text-xl md:text-2xl font-black tracking-tight" id="appTitle">Café POS</h1>
+            <h1 class="text-xl md:text-2xl font-black tracking-tight" id="appTitle">K-TECH</h1>
             <p class="text-xs md:text-sm opacity-80" id="appSubtitle">Fast checkout • Multi-customer • Inventory • Receipts</p>
           </div>
         </div>
@@ -156,7 +168,6 @@
           <button id="darkToggle" class="md-btn w-10 h-10 rounded-full grid place-items-center bg-white/70 dark:bg-white/10 border border-black/10 dark:border-white/10">
             <span class="material-symbols-rounded" id="darkIcon">dark_mode</span>
           </button>
-          <span class="text-[10px] px-2 py-1 rounded-full bg-black/10 dark:bg-white/10">DEMO</span>
         </div>
       </div>
     </div>
@@ -256,7 +267,6 @@
             <div class="flex items-center justify-between text-sm"><span>ส่วนลดลูกค้า</span><span id="sumCustDisc">-0฿</span></div>
             <div class="flex items-center justify-between text-sm"><span>คูปอง</span><span id="sumCoupon">-0฿</span></div>
             <div class="flex items-center justify-between text-sm"><span>ใช้แต้ม</span><span id="sumRedeem">-0฿</span></div>
-            <div class="flex items-center justify-between text-sm"><span>VAT 7%</span><span id="sumVAT">0฿</span></div>
             <div class="border-t my-2 border-black/10 dark:border-white/10"></div>
             <div class="flex items-center justify-between text-lg font-extrabold text-[var(--brand-1)]"><span>สุทธิ</span><span id="sumTotal">0฿</span></div>
           </div>
@@ -396,7 +406,6 @@
         <div class="flex justify-between"><span>ส่วนลดลูกค้า</span><span id="rcCustDisc">0</span></div>
         <div class="flex justify-between"><span>คูปอง</span><span id="rcCoupon">0</span></div>
         <div class="flex justify-between"><span>ใช้แต้ม</span><span id="rcRedeem">0</span></div>
-        <div class="flex justify-between"><span>VAT</span><span id="rcVAT">0</span></div>
         <div class="flex justify-between font-extrabold"><span>สุทธิ</span><span id="rcTotal">0</span></div>
         <div class="flex justify-between"><span>วิธีชำระ</span><span id="rcMethod">-</span></div>
       </div>
@@ -414,7 +423,7 @@
 /* ---------- i18n ---------- */
 const i18n = {
   th: {
-    title: "Café POS",
+    title: "Café K-TECH",
     subtitle: "ขายเร็ว • ลูกค้าหลายประเภท • สต็อก • ใบเสร็จ",
     search: "ค้นหาเมนู...",
     all: "ทั้งหมด", coffee:"กาแฟ", tea:"ชา", pastry:"ขนม", juice:"น้ำผลไม้",
@@ -422,7 +431,7 @@ const i18n = {
     points: "แต้ม", checkPoints:"เช็คแต้ม", redeem:"ใช้แต้ม", redeemHint:"ใช้แต้ม 50 = -50฿",
     cartEmpty: "ตะกร้าว่าง",
     coupon: "คูปอง", couponEx: "ตัวอย่างคูปอง: CAFE10 (ลด 10%)",
-    subtotal: "ยอดรวม", custDisc:"ส่วนลดลูกค้า", couponSum:"คูปอง", usePoints:"ใช้แต้ม", vat:"VAT 7%", total:"สุทธิ",
+    subtotal: "ยอดรวม", custDisc:"ส่วนลดลูกค้า", couponSum:"คูปอง", usePoints:"ใช้แต้ม", total:"สุทธิ",
     cash:"เงินสด", card:"บัตร", qr:"QR", app:"แอป",
     payTitle:"ชำระเงิน", confirmPaid:"ยืนยันรับเงิน",
     demoNote:"สาธิตเท่านั้น: ไม่มีการตัดเงินจริง",
@@ -430,7 +439,7 @@ const i18n = {
     added:"เพิ่มลงตะกร้าแล้ว", paid:"ชำระเงินสำเร็จ",
   },
   en: {
-    title: "Café POS",
+    title: "Café K-TECH",
     subtitle: "Fast checkout • Multi-customer • Inventory • Receipts",
     search: "Search menu...",
     all: "All", coffee:"Coffee", tea:"Tea", pastry:"Pastry", juice:"Juice",
@@ -438,7 +447,7 @@ const i18n = {
     points: "Points", checkPoints:"Check points", redeem:"Redeem", redeemHint:"Redeem 50 = -50฿",
     cartEmpty: "Cart is empty",
     coupon: "Coupon", couponEx: "Example: CAFE10 (10% off)",
-    subtotal: "Subtotal", custDisc:"Customer discount", couponSum:"Coupon", usePoints:"Redeemed", vat:"VAT 7%", total:"Total",
+    subtotal: "Subtotal", custDisc:"Customer discount", couponSum:"Coupon", usePoints:"Redeemed", total:"Total",
     cash:"Cash", card:"Card", qr:"QR", app:"App",
     payTitle:"Payment", confirmPaid:"Confirm received",
     demoNote:"Demo only: No real charge",
@@ -465,7 +474,6 @@ function switchLang(lang){
   document.getElementById('sumCustDisc').previousElementSibling.textContent = t('custDisc');
   document.getElementById('sumCoupon').previousElementSibling.textContent = t('couponSum');
   document.getElementById('sumRedeem').previousElementSibling.textContent = t('usePoints');
-  document.getElementById('sumVAT').previousElementSibling.textContent = t('vat');
   document.getElementById('sumTotal').previousElementSibling.textContent = t('total');
   document.querySelector('[data-pay="cash"]').lastChild.textContent = t('cash');
   document.querySelector('[data-pay="card"]').lastChild.textContent = t('card');
@@ -597,10 +605,9 @@ function calcTotals(){
     if(coupon.type==='amount') couponDisc = coupon.value;
   }
   let redeemDisc = redeemUsed;
-  let base = Math.max(0, subtotal - custDisc - couponDisc - redeemDisc);
-  const vat = base*(settings.vat/100);
-  const total = Math.max(0, Math.round((base+vat)*100)/100);
-  return {rows, subtotal, custDisc, couponDisc, redeemDisc, vat, total};
+  // ราคาสินค้ารวม VAT แล้ว ไม่ต้องคำนวณ VAT แยก
+  const total = Math.max(0, Math.round((subtotal - custDisc - couponDisc - redeemDisc)*100)/100);
+  return {rows, subtotal, custDisc, couponDisc, redeemDisc, vat: 0, total};
 }
 function renderCart(){
   const list = document.getElementById('cartList');
@@ -637,7 +644,6 @@ function renderCart(){
   document.getElementById('sumCustDisc').textContent = '-'+fmt(sums.custDisc).replace('฿','')+'฿';
   document.getElementById('sumCoupon').textContent = '-'+fmt(sums.couponDisc).replace('฿','')+'฿';
   document.getElementById('sumRedeem').textContent = '-'+fmt(sums.redeemDisc).replace('฿','')+'฿';
-  document.getElementById('sumVAT').textContent = fmt(sums.vat);
   document.getElementById('sumTotal').textContent = fmt(sums.total);
 
   // Attach events
@@ -796,7 +802,6 @@ function fillReceipt(orderId, sums, method){
   document.getElementById('rcCustDisc').textContent = '-'+fmt(sums.custDisc).replace('฿','')+'฿';
   document.getElementById('rcCoupon').textContent = '-'+fmt(sums.couponDisc).replace('฿','')+'฿';
   document.getElementById('rcRedeem').textContent = '-'+fmt(sums.redeemDisc).replace('฿','')+'฿';
-  document.getElementById('rcVAT').textContent = fmt(sums.vat);
   document.getElementById('rcTotal').textContent = fmt(sums.total);
   document.getElementById('rcMethod').textContent = method ? method.toUpperCase() : '-';
 
@@ -945,8 +950,20 @@ function switchTab(tabId){
 }
 function applyRoleUI(){
   const isMgr = role==='manager';
-  const tabs = ['inventory','reports','settings'];
-  tabs.forEach(t=>{
+  const isCashier = role==='cashier';
+  
+  // พนักงานเห็นได้: inventory (สต็อก)
+  // ผู้จัดการเห็นได้: inventory, reports, settings
+  const cashierTabs = ['inventory'];
+  const managerOnlyTabs = ['reports','settings'];
+  
+  cashierTabs.forEach(t=>{
+    const btn = document.querySelector(`.tab-btn[data-tab="${t}"]`);
+    if(isMgr || isCashier){ btn.classList.remove('hidden'); }
+    else { btn.classList.add('hidden'); if(document.querySelector('[data-panel="'+t+'"]')?.classList.contains('hidden')===false){ switchTab('pos'); } }
+  });
+  
+  managerOnlyTabs.forEach(t=>{
     const btn = document.querySelector(`.tab-btn[data-tab="${t}"]`);
     if(isMgr){ btn.classList.remove('hidden'); }
     else { btn.classList.add('hidden'); if(document.querySelector('[data-panel="'+t+'"]')?.classList.contains('hidden')===false){ switchTab('pos'); } }
@@ -1130,5 +1147,5 @@ window.addEventListener('storage', ()=>{
   renderCart(); refreshInventoryUI(); refreshReports(); refreshCustomers(); updateTodaySales();
 });
 </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9702c9a81782fd0e',t:'MTc1NTM2Njc3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
